@@ -6,6 +6,38 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <h5>The confirmation will be sent to - <%= @order.email %></h5>
+  </div>
+
+  <div class="panel panel-default items">
+  <br>
+    <h4> Order Details: </h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Description</th>
+          <th>Unit Photo</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @order.line_items.each do |item| %>
+        <%= render partial: 'item', locals: { item: item } %>
+      <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5">
+            TOTAL:
+          </th>
+          <th>
+            <%= number_to_currency(@order.total, unit: "$", separator: ".", precision: 2)%>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

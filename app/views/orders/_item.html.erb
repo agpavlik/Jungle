@@ -1,0 +1,17 @@
+<tr>
+  <td colspan="2">
+    <%= item.product.name %>
+  </td>
+  <td>
+    <%= item.product.description %>
+  </td>
+  <td>
+    <%= image_tag item.product.image.thumb.url%>
+  </td>
+  <td>
+    <%= item.quantity %>
+  </td>
+  <td>
+    <%= number_to_currency(item.product.price, unit: "$", separator: ".", precision: 2) %>
+  </td>
+</tr>
