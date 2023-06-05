@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
 
+
+  # routs for About Us
   get 'about/index'
   get '/about', to: 'about#index'
+
+  
+  # routs for User login / logout
+  get '/signup', to: 'users#new'
+  post '/users', to: 'users#create'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
 
   root to: 'products#index'
 

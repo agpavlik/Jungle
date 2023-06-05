@@ -22,10 +22,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0"
-        <li>
-          <%= link_to "About", "/about", class: "nav-link" %>
-        </li>
-
         <%# <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -48,6 +44,9 @@
         </li> %>
       </ul>
       <ul class="navbar-nav">
+        <li>
+          <%= link_to "About Us", "/about", class: "nav-link" %>
+        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
@@ -69,6 +68,22 @@
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
+          <% if current_user %>
+
+            <li>
+              <%= link_to 'Logout', '/logout', class: "nav-link" %>
+            </li>
+            <li id="nav-user">
+              <%= current_user.email %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to 'Login', '/login', class: "nav-link" %>
+            </li>
+            <li>
+              <%= link_to 'Signup', '/signup', class: "nav-link" %>
+            </li>
+          <% end %>
       </ul>
     </div>
   </div>
