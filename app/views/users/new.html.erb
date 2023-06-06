@@ -6,7 +6,7 @@
 
   <% if @user.errors.any? %>
     <div class="alert alert-danger">
-      <strong>You cannot signup due to the next error</strong>
+      <strong>You cannot signup due to the error. Check information in the fields.</strong>
       <ul>
         <% @user.errors.full_messages.each do |error| %>
           <li><%= error %></li>

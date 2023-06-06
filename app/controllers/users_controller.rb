@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       flash[:error] = 'Field missing'
-      redirect_to '/signup'
+      redirect '/signup'
     end
   end
 
