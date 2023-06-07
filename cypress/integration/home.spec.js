@@ -11,6 +11,7 @@ describe('Jungle app', () => {
 
     it("There is products on the page", () => {
       cy.get(".products article").should("be.visible");
+      cy.get(".products article:first").click();
     });
 
     it("There are 12 products on the page", () => {
