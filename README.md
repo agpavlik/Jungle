@@ -14,22 +14,22 @@ A mini e-commerce application built with Ruby and the Rails framework
 - The order page contains all information regarding chosen items and the final amount;
 
 ### Short demo video
-![Demovideo](/docs/demo8.gif)
+![Demovideo](/public/docs/demo9.gif)
 
 ### The main page with all the products
-![Main page](/docs/main.png)
+![Main page](/public/docs/main.png)
 
 ### Page with products
-![Like page](/docs/plants.png)
+![Like page](/public/docs/plants.png)
 
 ### Sign up form
-![Modal page](/docs/signup.png)
+![Modal page](/public/docs/signup.png)
 
 ### Cart without products
-![Modal page](/docs/my-cart-zero.png)
+![Modal page](/public/docs/my-cart-zero.png)
 
 ### Cart with products
-![Modal page](/docs/my-cart.png)
+![Modal page](/public/docs/my-cart.png)
 
 
 ## Setup
